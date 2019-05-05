@@ -1,0 +1,8 @@
+node_modules
+NS-RPC-darwin-x64
+NS-RPC-win32-x64
+NS-RPC-source-built-installers
+build.js
+icon.icns
+icon.ico
+install.gif
