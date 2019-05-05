@@ -1,0 +1,29 @@
+{
+    "games" :
+        [
+            {"name" : "Home", "img" : "switch"},
+            {"name" : "Splatoon 2", "img" : "splat"},
+            {"name" : "Mario Kart 8 Deluxe", "img" : "mk8d"},
+            {"name" : "Super Smash Bros. Ultimate", "img" : "ssbu"},
+            {"name" : "The Legend of Zelda: Breath of the Wild", "img" : "botw"},
+            {"name" : "Tetris 99", "img" : "tetris"},
+            {"name" : "Super Mario Odyssey", "img" : "smo"},
+            {"name" : "Super Mario Party", "img" : "smp"},
+            {"name" : "Mario Tennis Aces", "img" : "mta"},
+            {"name" : "New Super Mario Bros. U Deluxe", "img" : "nsmbud"},
+            {"name" : "Yoshi's Crafted World", "img" : "ycw"},
+            {"name" : "Kirby Star Allies", "img" : "ksa"},
+            {"name" : "Arms", "img" : "arms"},
+            {"name" : "Rocket League", "img" : "rl"},
+            {"name" : "Fortnite", "img" : "fn"},
+            {"name" : "Minecraft", "img" : "mc"},
+            {"name" : "Xenoblade Chronicles 2", "img" : "xc2"},
+            {"name" : "Stardew Valley", "img" : "sdv"},
+            {"name" : "The Elder Scrolls V: Skyrim", "img" : "skyrim"},
+            {"name" : "Sonic Mania", "img" : "sonic"},
+            {"name" : "Overcooked Special Edition", "img" : "ovr"},
+            {"name" : "Hyrule Warriors: Definitive Edition", "img" : "hw"},
+            {"name" : "Rayman Legends: Definitive Edition", "img" : "rml"},
+            {"name" : "OCTOPATH TRAVELER", "img" : "opt"}
+        ]
+}

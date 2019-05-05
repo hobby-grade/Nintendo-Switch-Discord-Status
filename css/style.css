@@ -1,0 +1,63 @@
+html {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 20em;
+    margin: auto;
+    color: #000;
+}
+
+.aboutContainer {
+    max-width: 30em;
+    margin: auto;
+    color: #000;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    color: #000;
+	text-align: center;
+}
+  
+h1 {
+    font-size: 1.8em;
+    cursor: default;
+}
+
+h2 {
+    font-weight: thin;
+    font-size: 1.2em;
+    text-align: left;
+    cursor: default;
+}
+
+.spacer {
+    margin-top: 20px;
+}
+
+.lilSpacer {
+    margin-top: 10px;
+}
+
+.bigSpacer {
+    margin-top: 25px;
+}
+
+.left {
+    text-align: left;
+}
+
+header {
+    background-color:#e60012;
+    color:white;
+    padding: 2em;
+}
+
+.aboutHeader {
+    background-color:#e60012;
+    color:white;
+    padding: 0.5em;
+}

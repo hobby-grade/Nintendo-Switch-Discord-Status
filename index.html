@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NS-RPC</title>
+    <link rel=stylesheet href=css/bulma.css>
+    <link rel=stylesheet href=css/style.css>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1> <div class="fab fa-nintendo-switch"></div> NS-RPC </h1>
+    </header>
+
+    <div class=spacer></div>
+
+    <div class=container>
+        <form>
+            <h2> Game </h2>
+            <div class=spacer></div>
+            <div class="select is-danger">
+                <select id=game>
+                </select>
+            </div>
+            <div class=spacer></div>
+            <h2> Status </h2>
+            <div class=spacer></div>
+            <input class="input is-danger" type=text id=status placeholder="Online, Karting with friends, etc.">
+            <div class=spacer></div>
+            <input class="button is-danger" type=submit>
+        </form>
+        
+        <div class=lilSpacer></div>
+        <button class="button is-warning" id=idle> Idle </button>
+        <div class=bigSpacer></div>
+        <a id=about style=color:gray;> About </a>
+    </div>
+    
+    <script>
+        const electron = require("electron");
+        const {ipcRenderer} = electron;
+        const gameData = require("./games.json");
+
+        // Generates the menu
+        const drop = document.getElementById("game");
+        let list = "";
+        for (i = 0; i < gameData.games.length; i++) {
+            list = list + "<option> " + gameData.games[i].name + "</option>";
+        };
+        drop.innerHTML = list;
+
+        // Declares and listens for a submition 
+        const form = document.querySelector("form");
+        form.addEventListener("submit", () => {
+            const game = document.querySelector("#game").value;
+            const mode = document.querySelector("#status").value;
+            ipcRenderer.send("game", game, mode);
+        });
+
+        // Declares and listens for the idle button click
+        const idle = document.getElementById("idle");
+        idle.addEventListener("click", () => {
+            ipcRenderer.send("idle");
+        });
+        
+        // Declares and listens for the about label click
+        const about = document.getElementById("about");
+        about.addEventListener("click", () => {
+            ipcRenderer.send("about");
+        });
+
+    </script>
+
+</body>
+</html>
