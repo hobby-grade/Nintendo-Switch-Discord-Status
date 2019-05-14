@@ -1,20 +1,20 @@
 {
-  "name": "NS-RPC",
-  "version": "0.5.0",
-  "description": "Displaying Switch games on Discord.",
+  "name": "ns-rpc",
+  "version": "0.6.0",
+  "description": "The definitive way to display your Nintendo Switch games in Discord.",
   "main": "index.js",
   "scripts": {
     "start": "electron ."
   },
   "author": "Da532",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "discord-rich-presence": "0.0.8",
-    "electron": "^5.0.1",
-    "electron-squirrel-startup": "^1.0.0",
-    "electron-winstaller": "^3.0.4"
+    "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
+    "electron-winstaller": "^3.0.4",
+    "electron": "^5.0.1",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.17.2",

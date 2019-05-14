@@ -16,14 +16,22 @@
             {"name" : "Arms", "img" : "arms"},
             {"name" : "Rocket League", "img" : "rl"},
             {"name" : "Fortnite", "img" : "fn"},
+            {"name" : "Warframe", "img" : "wf"},
+            {"name" : "Paladins", "img" : "pal"},
             {"name" : "Minecraft", "img" : "mc"},
+            {"name" : "Nintendo Entertainment System", "img" : "nes"},
             {"name" : "Xenoblade Chronicles 2", "img" : "xc2"},
             {"name" : "Stardew Valley", "img" : "sdv"},
+            {"name" : "Snipperclips", "img" : "sc"},
+            {"name" : "BOXBOY! + BOXGIRL!", "img" : "bb"},
             {"name" : "The Elder Scrolls V: Skyrim", "img" : "skyrim"},
             {"name" : "Sonic Mania", "img" : "sonic"},
-            {"name" : "Overcooked Special Edition", "img" : "ovr"},
+            {"name" : "Overcooked! Special Edition", "img" : "ovr"},
+            {"name" : "Overcooked! 2", "img" : "oc2"},
             {"name" : "Hyrule Warriors: Definitive Edition", "img" : "hw"},
             {"name" : "Rayman Legends: Definitive Edition", "img" : "rml"},
+            {"name" : "NBA 2K19", "img" : "nba19"},
+            {"name" : "FIFA 19", "img" : "fifa19"},
             {"name" : "OCTOPATH TRAVELER", "img" : "opt"}
         ]
 }

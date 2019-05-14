@@ -45,9 +45,14 @@
 
         // Generates the menu
         const drop = document.getElementById("game");
-        let list = "";
+        let list = "<option> Home </option>\n";
+        let games = [];
         for (i = 0; i < gameData.games.length; i++) {
-            list = list + "<option> " + gameData.games[i].name + "</option>";
+            if (gameData.games[i].name !== "Home") games.push(gameData.games[i].name);
+        };
+        games.sort();
+        for (i = 0; i < games.length; i++) {
+            list = list + "<option> " + games[i] + "</option>\n";
         };
         drop.innerHTML = list;
 
@@ -61,8 +66,10 @@
 
         // Declares and listens for the idle button click
         const idle = document.getElementById("idle");
+        let clicks = 0;
         idle.addEventListener("click", () => {
-            ipcRenderer.send("idle");
+            clicks++;
+            ipcRenderer.send("idle", clicks);
         });
         
         // Declares and listens for the about label click

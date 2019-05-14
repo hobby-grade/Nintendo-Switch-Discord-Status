@@ -39,7 +39,7 @@ function createWindow () {
 function createAboutWindow () {
     aboutWindow = new BrowserWindow({
         width: 500,
-        height: 220,
+        height: 200,
         resizable: false,
         maximizable: false,
         icon: "icon.png",
@@ -63,6 +63,7 @@ function createAboutWindow () {
 let name;
 let desc;
 let img;
+let idle;
 
 // Executes when game data is recieved
 ipcMain.on("game", (e, game, status) => {
@@ -73,7 +74,8 @@ ipcMain.on("game", (e, game, status) => {
 });
 
 // Executes when idle data is recieved
-ipcMain.on("idle", () => {
+ipcMain.on("idle", (e, clicks) => {
+    idle = clicks
     setIdle();
 });
 
@@ -84,6 +86,7 @@ ipcMain.on("about", () => {
 
 // Sets the presence to idle
 function setIdle() {
+    if (idle === 16) return rpc.updatePresence({largeImageKey: "poo"});
     rpc.updatePresence({
         details: "Home", 
         state: "Idle", 
