@@ -1,6 +1,6 @@
 {
-  "name": "ns-rpc",
-  "version": "0.6.0",
+  "name": "NS-RPC",
+  "version": "0.6.2",
   "description": "The definitive way to display your Nintendo Switch games in Discord.",
   "main": "index.js",
   "scripts": {

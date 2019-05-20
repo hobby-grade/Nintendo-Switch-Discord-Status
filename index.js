@@ -16,7 +16,7 @@ function createWindow () {
         height: 500,
         resizable: false,
         maximizable: false,
-        icon: "icon.png",
+        icon: __dirname + "/icon.png",
         show: false,
         webPreferences: {
             nodeIntegration: true
@@ -42,7 +42,7 @@ function createAboutWindow () {
         height: 200,
         resizable: false,
         maximizable: false,
-        icon: "icon.png",
+        icon: __dirname + "/icon.png",
         show: false,
         webPreferences: {
             nodeIntegration: true
@@ -86,7 +86,11 @@ ipcMain.on("about", () => {
 
 // Sets the presence to idle
 function setIdle() {
-    if (idle === 16) return rpc.updatePresence({largeImageKey: "poo"});
+    if (idle === 16) return rpc.updatePresence({
+        details: "Yoshi's Fucking Island", 
+        state: "ccomign This Sprign", 
+        largeImageKey: "yfi",
+        largeImageText: "he's sitting there.."});
     rpc.updatePresence({
         details: "Home", 
         state: "Idle", 
