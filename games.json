@@ -32,6 +32,12 @@
             {"name" : "Rayman Legends: Definitive Edition", "img" : "rml"},
             {"name" : "NBA 2K19", "img" : "nba19"},
             {"name" : "FIFA 19", "img" : "fifa19"},
-            {"name" : "OCTOPATH TRAVELER", "img" : "opt"}
+            {"name" : "OCTOPATH TRAVELER", "img" : "opt"},
+            {"name" : "Super Mario Maker 2", "img" : "smm2"},
+            {"name" : "Cadence of Hyrule", "img" : "coh"},
+            {"name" : "Crash Team Racing Nitro-Fueled", "img" : "ctr"},
+            {"name" : "Collection of Mana", "img" : "com"},
+            {"name" : "Cuphead", "img" : "ch"},
+            {"name" : "Mortal Kombat 11", "img" : "mk11"}
         ]
 }
