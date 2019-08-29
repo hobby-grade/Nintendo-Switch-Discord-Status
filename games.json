@@ -41,6 +41,7 @@
             {"name" : "Mortal Kombat 11", "img" : "mk11"},
             {"name" : "Bloodstained: Ritual of the Night", "img" : "bs"},
             {"name" : "Dragon Quest Builders 2", "img" : "dqb2"},
-            {"name" : "Fire Emblem: Three Houses", "img" : "fe3h"}
+            {"name" : "Fire Emblem: Three Houses", "img" : "fe3h"},
+            {"name" : "Astral Chain", "img" : "ac"}
         ]
 }
