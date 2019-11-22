@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 const { app, BrowserWindow, ipcMain } = require("electron");
-const rpc = require("discord-rich-presence")("574263592908488705");
-const gameData = require("./games");  
+const rpc = require("discord-rich-presence")("647244885203877901");
+const gameData = require("./games");
 
 // For the love of God please let there be a better way of handling this
 if (require("./installer-events").handleSquirrelEvent(app)) return;
@@ -25,13 +25,13 @@ function createWindow () {
 
     window.setMenu(null);
     window.loadFile("index.html");
-    
+
     window.on("closed", () => {
         window = null;
     });
-    
+
     window.on("ready-to-show", () => window.show());
-    
+
     setIdle();
 }
 
@@ -87,14 +87,14 @@ ipcMain.on("about", () => {
 // Sets the presence to idle
 function setIdle() {
     if (idle === 16) return rpc.updatePresence({
-        details: "Yoshi's Fucking Island", 
-        state: "ccomign This Sprign", 
+        details: "Yoshi's Fucking Island",
+        state: "ccomign This Sprign",
         largeImageKey: "yfi",
         largeImageText: "he's sitting there.."});
     rpc.updatePresence({
-        details: "Home", 
-        state: "Idle", 
-        largeImageKey: "switch", 
+        details: "Home",
+        state: "Idle",
+        largeImageKey: "switch",
         largeImageText: "Home"
     });
 }
@@ -109,9 +109,9 @@ function setRPC() {
     }
 
     rpc.updatePresence({
-        details: name, 
-        state: desc, 
-        largeImageKey: img, 
+        details: name,
+        state: desc,
+        largeImageKey: img,
         largeImageText: name
     });
 }
