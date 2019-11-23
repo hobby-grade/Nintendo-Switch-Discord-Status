@@ -1,8 +1,9 @@
 {
-  "name": "NS-RPC",
-  "version": "0.6.5",
+  "name": "ns-rpc",
+  "version": "0.7.0",
   "description": "The definitive way to display your Nintendo Switch games in Discord.",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "start": "electron ."
   },
@@ -10,16 +11,26 @@
   "license": "MIT",
   "dependencies": {
     "discord-rich-presence": "0.0.8",
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "nexe": "^3.3.2"
   },
   "devDependencies": {
-    "electron-winstaller": "^3.0.4",
     "electron": "^5.0.1",
+    "electron-packager": "^14.1.1",
+    "electron-winstaller": "^3.0.4",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-node": "^9.0.1",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nekoxandu/NS-RPC.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nekoxandu/NS-RPC/issues"
+  },
+  "homepage": "https://github.com/nekoxandu/NS-RPC#readme"
 }
