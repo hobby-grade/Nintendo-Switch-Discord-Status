@@ -2,7 +2,7 @@
 A gimped, mildly decent solution to display what you're playing on Nintendo Switch on Discord. Thanks to [Da532](https://github.com/Da532) for doing pretty much 99% of the work on this one. ✌️
 
 ## Introduction
-Switch Rich Presence is a fork of ['NS-RPC' (Nintendo Switch Rich Presence)](https://github.com/Da532/NS-RPC) and is an Electron app for Windows and macOS that allows Switch users to display
+Switch Rich Presence is a barely competent fork of ['NS-RPC' (Nintendo Switch Rich Presence)](https://github.com/Da532/NS-RPC), an Electron app for Windows and macOS that allows Switch users to display
 the game they're currently playing as their Discord status with Rich Presence.
 
 *This was my first time ever using JavaScript. I'm bad at it. Fight me.*
