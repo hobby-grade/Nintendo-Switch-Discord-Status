@@ -9,7 +9,7 @@ the game they're currently playing as their Discord status with Rich Presence.
 
 ![Switch Rich Presence's design](https://i.imgur.com/hPkveG6.png)
 
-### With Switch Rich Presence you can..
+### With Switch Rich Presence you can...
 * Show off to peasants that you have a Switch across all of Discord.
 * Select from a limited-by-discord list of games to show off.
 * Set a custom status message to let everyone know exactly what you're doing.
