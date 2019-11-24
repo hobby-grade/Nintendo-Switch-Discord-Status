@@ -1,7 +1,7 @@
 /* eslint-disable no-empty */
 /* eslint-disable no-unused-vars */
 
-// Windows stuff
+// Winblows stuff
 function handleSquirrelEvent(app) {
     if (process.argv.length === 1) {
         return false;
