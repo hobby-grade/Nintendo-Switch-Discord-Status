@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NS-RPC</title>
+    <title>Switch Rich Presence</title>
     <link rel=stylesheet href=css/bulma.css>
     <link rel=stylesheet href=css/style.css>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -31,13 +31,13 @@
             <div class=spacer></div>
             <input class="button is-danger" type=submit>
         </form>
-        
+
         <div class=lilSpacer></div>
         <button class="button is-warning" id=idle> Idle </button>
         <div class=bigSpacer></div>
         <a id=about style=color:gray;> About </a>
     </div>
-    
+
     <script>
         const electron = require("electron");
         const {ipcRenderer} = electron;
@@ -56,7 +56,7 @@
         };
         drop.innerHTML = list;
 
-        // Declares and listens for a submition 
+        // Declares and listens for a submition
         const form = document.querySelector("form");
         form.addEventListener("submit", () => {
             const game = document.querySelector("#game").value;
@@ -71,7 +71,7 @@
             clicks++;
             ipcRenderer.send("idle", clicks);
         });
-        
+
         // Declares and listens for the about label click
         const about = document.getElementById("about");
         about.addEventListener("click", () => {
