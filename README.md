@@ -7,7 +7,7 @@ the game they're currently playing as their Discord status with Rich Presence.
 
 *This was my first time ever using JavaScript. I'm bad at it.*
 
-![Switch Rich Presence's design](https://i.imgur.com/hPkveG6.png)
+![Switch Rich Presence's design](https://i.imgur.com/6nikcJU.png)
 
 ### With Switch Rich Presence you can...
 * Show off to peasants that you have a Switch across all of Discord.
