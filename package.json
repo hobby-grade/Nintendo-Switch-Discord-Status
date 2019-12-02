@@ -10,9 +10,9 @@
   "author": "hobby-grade",
   "license": "MIT",
   "dependencies": {
+    "bulma": "^0.8.0",
     "discord-rich-presence": "0.0.8",
-    "electron-squirrel-startup": "^1.0.0",
-    "nexe": "^3.3.2"
+    "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
     "electron": "^5.0.1",

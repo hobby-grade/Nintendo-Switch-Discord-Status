@@ -1,6 +1,10 @@
 node_modules
 Switch Rich Presence-win32-x64
+Switch-Rich-Presence-win32-x64
 Switch Rich Presence-win32-x64.zip
+Switch-Rich-Presence-win32-x64.zip
+Switch-Rich-Presence-darwin-x64
+Switch-Rich-Presence-darwin-x64.zip
 build.js
 icon.icns
 icon.ico

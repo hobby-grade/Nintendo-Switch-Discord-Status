@@ -13,7 +13,7 @@ let aboutWindow;
 function createWindow () {
     window = new BrowserWindow({
         width: 400,
-        height: 500,
+        height: 550,
         resizable: false,
         maximizable: false,
         icon: __dirname + "/icon.png",
