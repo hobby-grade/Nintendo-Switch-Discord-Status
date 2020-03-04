@@ -19,7 +19,12 @@ the game they're currently playing as their Discord status with Rich Presence.
 Open an issue on this page and I'll add it as quickly as I can.
 
 ### Problems:
-As of right now, I do not know of a way to have more than 150 art assets stored by Discord in order to display artwork for all of the games. I have not added 150 games to the list yet, but I will attempt to find a way around this limitation in the meantime.
+As of right now, I do not know of a way to have more than 150 art assets stored by Discord in order to display artwork for all of the games that are available on the Nintendo Switch. I have not added 150 games to the list yet, but I will attempt to find a way around this limitation in the meantime. The temporary solution is to keep the list updated with the 150 most popular/recent games.
+
+Alternatively, the 150 game limit can be exceeded by using generic artwork for any game outside of the 150. The rich presence would then display the title and status of the game, just without the custom game artwork. I can foresee using the generic "Home" artwork in this case.
+
+If you'd like to leave any suggestions or ideas about this problem, please open an issue on this repo.
+
 I am also attempting to correct the UI errors.
 
 ## Prerequisites
