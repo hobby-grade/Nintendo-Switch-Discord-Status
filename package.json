@@ -7,7 +7,9 @@
   "bin": "index.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . --overwrite --out=build --icon=./icon.icns"
+    "build": "npm run build-mac && npm run build-win",
+    "build-mac": "electron-packager . --platform=darwin --overwrite --out=build --icon=./icon.icns",
+    "build-win": "electron-packager . --platform=win32 --overwrite --out=build --icon=./icon.ico"
   },
   "author": "hobby-grade",
   "license": "MIT",
