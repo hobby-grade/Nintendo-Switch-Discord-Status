@@ -2,6 +2,7 @@
   "games" :
         [
             {"name" : "Home", "img" : "switch"},
+            {"name" : "Animal Crossing: New Horizons", "img" : "animalcrossing"},
             {"name" : "Arms", "img" : "arms"},
             {"name" : "Astral Chain", "img" : "astral"},
             {"name" : "Bayonetta", "img" : "bayonet"},
