@@ -1,5 +1,5 @@
 # Switch Rich Presence
-A moderately okay solution to display what you're playing on Nintendo Switch on Discord. Thanks to [Da532](https://github.com/Da532) for doing 99% of the work on this. ✌️
+A moderately okay solution to display what you're playing on Nintendo Switch using Rich Presence on Discord. Thanks to [Da532](https://github.com/Da532) for doing 99% of the work on this. ✌️
 
 ## Introduction
 "Switch Rich Presence" is a somewhat competent fork of ['NS-RPC' (Nintendo Switch Rich Presence)](https://github.com/Da532/NS-RPC), an Electron app for Windows and macOS that allows Switch users to display
@@ -32,7 +32,7 @@ All you need is a high tolerance for bad UI and the [Discord App](https://discor
 
 ## Installation
 If you're looking for convenience, you'll find already built copies of Switch Rich Presence for
-both Windows and macOS [here](https://github.com/hobby-grade/Switch-Rich-Presence/releases).
+Linux, macOS, and Windows [here](https://github.com/hobby-grade/Switch-Rich-Presence/releases).
 
 ## Building From source
 Building from source is also possible if you don't value your time.
