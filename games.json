@@ -3,6 +3,7 @@
         [
             {"name" : "Home", "img" : "switch"},
             {"name" : "Animal Crossing: New Horizons", "img" : "animalcrossing"},
+            {"name" : "Apex Legends", "img" : "apexlegends"},
             {"name" : "Arms", "img" : "arms"},
             {"name" : "Ary and the Secret of Seasons", "img" : "aryseasons"},
             {"name" : "Astral Chain", "img" : "astral"},
@@ -13,6 +14,7 @@
             {"name" : "Bioshock Infinite", "img" : "bioshockinfinite"},
             {"name" : "Bloodstained: Ritual of the Night", "img" : "bloodstained"},
             {"name" : "BOXBOY! + BOXGIRL!", "img" : "boxboy"},
+            {"name" : "Bravely Default II", "img" : "bravely2"},
             {"name" : "Broken Age", "img" : "brokenage"},
             {"name" : "Cadence of Hyrule", "img" : "cadencehyrule"},
             {"name" : "Collection of Mana", "img" : "com"},
@@ -70,6 +72,7 @@
             {"name" : "Rayman Legends: Definitive Edition", "img" : "rayman"},
             {"name" : "Ring Fit Adventure", "img" : "ringfit"},
             {"name" : "Rocket League", "img" : "rocketboys"},
+            {"name" : "Scott Pilgrim vs. The World: The Game", "img" : "scottpilgrim"},
             {"name" : "Sid Meier's Civilization VI", "img" : "civvi"},
             {"name" : "Snipperclips", "img" : "snipper"},
             {"name" : "Sonic Mania", "img" : "sonic"},
