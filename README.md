@@ -32,7 +32,7 @@ All you need is a high tolerance for bad UI and the [Discord App](https://discor
 
 ## Installation
 If you're looking for convenience, you'll find already built copies of Switch Rich Presence for
-both Windows and macOS [here](https://github.com/hobby-grade/Switch-Rich-Presence/releases).
+Linux, macOS, and Windows [here](https://github.com/hobby-grade/Switch-Rich-Presence/releases).
 
 ## Building From source
 Building from source is also possible if you don't value your time.
