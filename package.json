@@ -20,7 +20,7 @@
     "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
-    "electron": "^10.2.0",
+    "electron": "^11.5.0",
     "electron-packager": "^15.2.0",
     "electron-winstaller": "^3.0.4",
     "eslint": "^5.16.0",
