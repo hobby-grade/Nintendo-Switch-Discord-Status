@@ -12,8 +12,8 @@ let aboutWindow;
 // Used to create the window
 function createWindow () {
     window = new BrowserWindow({
-        width: 400,
-        height: 550,
+        width: 450,
+        height: 600,
         resizable: false,
         maximizable: false,
         icon: __dirname + "/icon.png",
