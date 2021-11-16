@@ -17,7 +17,8 @@
   "dependencies": {
     "bulma": "^0.8.0",
     "discord-rich-presence": "0.0.8",
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "upgrades": "^2.8.0-rc.0"
   },
   "devDependencies": {
     "electron": "^11.5.0",
