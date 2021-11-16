@@ -7,7 +7,7 @@ the game they're currently playing as their Discord status with Rich Presence.
 
 *This was my first time ever using JavaScript and I'm not great at it. I'm open to hearing how to improve*
 
-![Nintendo Switch Discord Status Screenshot](https://i.imgur.com/uy7Pano.png)
+![Nintendo Switch Discord Status Screenshot](https://i.imgur.com/PkVVlgX.png)
 
 ### With Nintendo Switch Discord Status you can...
 * Show off to non-Switch owners that you are a Nintendo Switch owner across all of Discord.
