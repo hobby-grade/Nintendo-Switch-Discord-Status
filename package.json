@@ -1,6 +1,6 @@
 {
   "name": "Nintendo-Switch-Discord-Status",
-  "version": "0.8.3",
+  "version": "0.9.0"
   "description": "A mildly decent way to display your Nintendo Switch games in Discord.",
   "productName": "Nintendo Switch Discord Status",
   "main": "index.js",
@@ -33,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nekoxandu/Nintendo-Switch-Discord-Status.git"
+    "url": "git+https://github.com/hobby-grade/Nintendo-Switch-Discord-Status.git"
   },
   "bugs": {
-    "url": "https://github.com/nekoxandu/Nintendo-Switch-Discord-Status/issues"
+    "url": "https://github.com/hobby-grade/Nintendo-Switch-Discord-Status/issues"
   },
-  "homepage": "https://github.com/nekoxandu/Nintendo-Switch-Discord-Status#readme"
+  "homepage": "https://github.com/hobby-grade/Nintendo-Switch-Discord-Status#readme"
 }
