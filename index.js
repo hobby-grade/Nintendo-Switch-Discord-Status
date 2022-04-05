@@ -32,7 +32,8 @@ function createWindow () {
 
     window.on("ready-to-show", () => window.show());
 
-    window.openDevTools();
+    if(!app.isPackaged)
+        window.openDevTools();
 
     setIdle();
 }
