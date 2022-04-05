@@ -8,10 +8,13 @@
   "scripts": {
     "start": "npm run svelte-build && electron .",
     "electron": "electron .",
-    "build": "npm run svelte-build && npm run build-mac && npm run build-win && npm run build-linux",
-    "build-mac": "electron-packager . --platform=darwin --overwrite --out=build --icon=./icon.icns",
-    "build-win": "electron-packager . --platform=win32 --overwrite --out=build --icon=./icon.ico",
-    "build-linux": "electron-packager . --platform=linux --overwrite --out=build --icon=./icon.png",
+    "build": "npm run svelte-build && npm run electron-build-mac && npm run electron-build-win && npm run electron-build-linux",
+    "build-mac": "npm run svelte-build && npm run electron-build-mac",
+    "build-win": "npm run svelte-build && npm run electron-build-win",
+    "build-linux": "npm run svelte-build && npm run electron-build-linux",
+    "electron-build-mac": "electron-packager . --platform=darwin --overwrite --out=build --icon=./icon.icns",
+    "electron-build-win": "electron-packager . --platform=win32 --overwrite --out=build --icon=./icon.ico",
+    "electron-build-linux": "electron-packager . --platform=linux --overwrite --out=build --icon=./icon.png",
     "svelte-build": "rollup -c",
     "svelte-dev": "rollup -c -w",
     "svelte-start": "sirv public"
