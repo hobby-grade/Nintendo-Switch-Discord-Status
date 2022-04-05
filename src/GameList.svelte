@@ -2,6 +2,7 @@
   import Select from 'svelte-select'
  export let selectedGame;
  export let games;
+ export let customGame;
 
  let localSelect = selectedGame;
 
@@ -18,11 +19,23 @@
       containerStyles="width: 20rem;"
       on:select="{(e) => selectedGame = e.detail.name}"
     />
+    {#if selectedGame === 'Custom'}
+      <input 
+        class="input is-danger customName"
+        type="text" 
+        bind:value={customGame} 
+        placeholder="Game's name"
+      >
+    {/if}
   </div>
 </main>
 
 
 <style>
+
+.customName {
+  margin: 1rem auto;
+}
 
 .select {
   --itemIsActiveBG: #e60012;

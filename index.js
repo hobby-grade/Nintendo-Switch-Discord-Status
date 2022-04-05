@@ -40,15 +40,17 @@ function createWindow () {
 
 // Defines the vars that will contain game data
 let name;
+let customName;
 let desc;
 let img;
 let idle;
 
 // Executes when game data is recieved
-ipcMain.on("game", (e, game, status) => {
+ipcMain.on("game", (e, game, status, customGame) => {
     if (status === "") desc = "Online";
     else desc = status.charAt(0).toUpperCase() + status.slice(1);
     name = game;
+    customName = customGame;
     setRPC();
 });
 
@@ -84,7 +86,7 @@ function setRPC() {
     }
 
     rpc.updatePresence({
-        details: name,
+        details: name === 'Custom' ? customName : name,
         state: desc,
         largeImageKey: img,
         largeImageText: name

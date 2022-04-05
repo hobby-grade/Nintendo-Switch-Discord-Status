@@ -15,6 +15,7 @@
 
   let selectedGame = home.name;
   let statusMessage = '';
+  let customGameName = '';
   let clicks = 0;
 
   let showAbout = false;
@@ -39,7 +40,7 @@
       <form>
           <h2> Game </h2>
           <div class=spacer></div>
-          <GameList games={games} bind:selectedGame />
+          <GameList games={games} bind:customGame={customGameName} bind:selectedGame />
           <div class=spacer></div>
           <h2> Status </h2>
           <div class=spacer></div>
@@ -54,7 +55,7 @@
             class="button is-danger" 
             type="button"
             value="Submit"
-            on:click="{() => ipcRenderer.send('game', selectedGame, statusMessage)}"
+            on:click="{() => ipcRenderer.send('game', selectedGame, statusMessage, customGameName)}"
           >
         </form>
 
