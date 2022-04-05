@@ -1,5 +1,6 @@
 [
   {"name" : "Home", "img" : "switch"},
+  {"name" : "Custom", "img" : "switch"},
   {"name" : "Among Us", "img" : "bungus"},
   {"name" : "Animal Crossing: New Horizons", "img" : "animalcrossing"},
   {"name" : "Apex Legends", "img" : "apexlegends"},

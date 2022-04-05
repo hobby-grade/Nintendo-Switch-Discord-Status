@@ -1,14 +1,19 @@
 <script>
   import About from './About.svelte';
+  import GameList from './GameList.svelte';
+
   const electron = window.require('electron');
   const { ipcRenderer } = electron;
   const gameData = window.require('../games.json');
 
   const home = gameData.filter(e => e.name === 'Home')[0];
-  const games = gameData.filter(e => e.name !== 'Home');
+  const custom = gameData.filter(e => e.name === 'Custom')[0];
+  const games = gameData.filter(e => e.name !== 'Home' && e.name !== 'Custom');
   games.sort();
+  games.unshift(custom);
+  games.unshift(home);
 
-  let selectedGame = gameData[0].name;
+  let selectedGame = home.name;
   let statusMessage = '';
   let clicks = 0;
 
@@ -34,14 +39,7 @@
       <form>
           <h2> Game </h2>
           <div class=spacer></div>
-          <div class="select is-danger">
-              <select id=game bind:value={selectedGame}>
-                <option>{home.name}</option>
-                {#each games as game}
-                  <option>{game.name}</option>
-                {/each}
-              </select>
-          </div>
+          <GameList games={games} bind:selectedGame />
           <div class=spacer></div>
           <h2> Status </h2>
           <div class=spacer></div>
