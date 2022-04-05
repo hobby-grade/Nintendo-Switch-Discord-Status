@@ -2,13 +2,11 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const rpc = require("discord-rich-presence")("647244885203877901");
 const gameData = require("./games");
-const path = require('path');
 
 // For the love of God please let there be a better way of handling this
-if (require("./installer-events").handleSquirrelEvent(app)) return;
+if (require("./installer-events").handleSquirrelEvent(app)) throw false;
 
 let window;
-let aboutWindow;
 
 // Used to create the window
 function createWindow () {
@@ -39,30 +37,6 @@ function createWindow () {
     setIdle();
 }
 
-// Used to create the about window
-function createAboutWindow () {
-    aboutWindow = new BrowserWindow({
-        width: 500,
-        height: 300,
-        resizable: false,
-        maximizable: false,
-        icon: __dirname + "/icon.png",
-        show: false,
-        webPreferences: {
-            nodeIntegration: true
-        }
-    });
-
-    aboutWindow.setMenu(null);
-    aboutWindow.loadFile("about.html");
-
-    aboutWindow.on("closed", () => {
-        aboutWindow = null;
-    });
-
-    aboutWindow.on("ready-to-show", () => aboutWindow.show());
-}
-
 // Defines the vars that will contain game data
 let name;
 let desc;
@@ -83,10 +57,6 @@ ipcMain.on("idle", (e, clicks) => {
     setIdle();
 });
 
-// Executes when about data is recieved
-ipcMain.on("about", () => {
-    createAboutWindow();
-});
 
 // Sets the presence to idle
 function setIdle() {
