@@ -6,18 +6,26 @@
   "main": "index.js",
   "bin": "index.js",
   "scripts": {
-    "start": "electron .",
-    "build": "npm run build-mac && npm run build-win && npm run build-linux",
+    "start": "npm run svelte-build && electron .",
+    "electron": "electron .",
+    "build": "npm run svelte-build && npm run build-mac && npm run build-win && npm run build-linux",
     "build-mac": "electron-packager . --platform=darwin --overwrite --out=build --icon=./icon.icns",
     "build-win": "electron-packager . --platform=win32 --overwrite --out=build --icon=./icon.ico",
-    "build-linux": "electron-packager . --platform=linux --overwrite --out=build --icon=./icon.png"
+    "build-linux": "electron-packager . --platform=linux --overwrite --out=build --icon=./icon.png",
+    "svelte-build": "rollup -c",
+    "svelte-dev": "rollup -c -w",
+    "svelte-start": "sirv public"
   },
   "author": "hobby-grade",
   "license": "MIT",
   "dependencies": {
-    "discord-rich-presence": "0.0.8"
+    "discord-rich-presence": "0.0.8",
+    "sirv-cli": "^2.0.0"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "concurrently": "^7.1.0",
     "electron": "^11.5.0",
     "electron-packager": "^15.2.0",
     "electron-winstaller": "^3.0.4",
@@ -26,7 +34,13 @@
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-node": "^9.0.1",
     "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+html {
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+}
+
+h1 {
+  font-size: 1.8em;
+  cursor: default;
+  font-family: Roboto;
+}
+
+h2 {
+  font-size: 1.2em;
+  text-align: left;
+  cursor: default;
+  font-family: Roboto;
+}
+
+header {
+  background-color:#e60012;
+  color:white;
+  padding: 2.5em;
+  font-family: Roboto;
+  font-style: italic;
+}

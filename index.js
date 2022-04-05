@@ -2,6 +2,7 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const rpc = require("discord-rich-presence")("647244885203877901");
 const gameData = require("./games");
+const path = require('path');
 
 // For the love of God please let there be a better way of handling this
 if (require("./installer-events").handleSquirrelEvent(app)) return;
@@ -19,18 +20,21 @@ function createWindow () {
         icon: __dirname + "/icon.png",
         show: false,
         webPreferences: {
-            nodeIntegration: true
-        }
+            nodeIntegration: true,
+
+        },
     });
 
     window.setMenu(null);
-    window.loadFile("index.html");
+    window.loadFile('public/index.html');
 
     window.on("closed", () => {
         window = null;
     });
 
     window.on("ready-to-show", () => window.show());
+
+    window.openDevTools();
 
     setIdle();
 }
@@ -101,9 +105,9 @@ function setIdle() {
 
 // Finds the game image and sets the presence
 function setRPC() {
-    for (i = 0; i < gameData.games.length; i++) {
-        if (gameData.games[i].name === name) {
-            img = gameData.games[i].img;
+    for (i = 0; i < gameData.length; i++) {
+        if (gameData[i].name === name) {
+            img = gameData[i].img;
             break;
         }
     }
