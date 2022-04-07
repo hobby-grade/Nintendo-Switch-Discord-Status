@@ -4,10 +4,9 @@ const rpc = require("discord-rich-presence")("647244885203877901");
 const gameData = require("./games");
 
 // For the love of God please let there be a better way of handling this
-if (require("./installer-events").handleSquirrelEvent(app)) return;
+if (require("./installer-events").handleSquirrelEvent(app)) throw false;
 
 let window;
-let aboutWindow;
 
 // Used to create the window
 function createWindow () {
@@ -19,12 +18,13 @@ function createWindow () {
         icon: __dirname + "/icon.png",
         show: false,
         webPreferences: {
-            nodeIntegration: true
-        }
+            nodeIntegration: true,
+
+        },
     });
 
     window.setMenu(null);
-    window.loadFile("index.html");
+    window.loadFile('public/index.html');
 
     window.on("closed", () => {
         window = null;
@@ -32,44 +32,25 @@ function createWindow () {
 
     window.on("ready-to-show", () => window.show());
 
+    if(!app.isPackaged)
+        window.openDevTools();
+
     setIdle();
-}
-
-// Used to create the about window
-function createAboutWindow () {
-    aboutWindow = new BrowserWindow({
-        width: 500,
-        height: 300,
-        resizable: false,
-        maximizable: false,
-        icon: __dirname + "/icon.png",
-        show: false,
-        webPreferences: {
-            nodeIntegration: true
-        }
-    });
-
-    aboutWindow.setMenu(null);
-    aboutWindow.loadFile("about.html");
-
-    aboutWindow.on("closed", () => {
-        aboutWindow = null;
-    });
-
-    aboutWindow.on("ready-to-show", () => aboutWindow.show());
 }
 
 // Defines the vars that will contain game data
 let name;
+let customName;
 let desc;
 let img;
 let idle;
 
 // Executes when game data is recieved
-ipcMain.on("game", (e, game, status) => {
+ipcMain.on("game", (e, game, status, customGame) => {
     if (status === "") desc = "Online";
     else desc = status.charAt(0).toUpperCase() + status.slice(1);
     name = game;
+    customName = customGame;
     setRPC();
 });
 
@@ -79,10 +60,6 @@ ipcMain.on("idle", (e, clicks) => {
     setIdle();
 });
 
-// Executes when about data is recieved
-ipcMain.on("about", () => {
-    createAboutWindow();
-});
 
 // Sets the presence to idle
 function setIdle() {
@@ -101,15 +78,15 @@ function setIdle() {
 
 // Finds the game image and sets the presence
 function setRPC() {
-    for (i = 0; i < gameData.games.length; i++) {
-        if (gameData.games[i].name === name) {
-            img = gameData.games[i].img;
+    for (i = 0; i < gameData.length; i++) {
+        if (gameData[i].name === name) {
+            img = gameData[i].img;
             break;
         }
     }
 
     rpc.updatePresence({
-        details: name,
+        details: name === 'Custom' ? customName : name,
         state: desc,
         largeImageKey: img,
         largeImageText: name
