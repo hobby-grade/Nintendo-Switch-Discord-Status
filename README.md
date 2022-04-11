@@ -6,7 +6,7 @@ A moderately okay solution to display what you're playing on Nintendo Switch usi
 the game they're currently playing as their Discord status with Rich Presence.
 
 
-![Nintendo Switch Discord Status Screenshot](https://i.imgur.com/PkVVlgX.png)
+![Nintendo Switch Discord Status Screenshot](https://imgur.com/a/EuOZqXC)
 
 ### With Nintendo Switch Discord Status you can...
 * Show off to non-Switch owners that you are a Nintendo Switch owner across all of Discord.
