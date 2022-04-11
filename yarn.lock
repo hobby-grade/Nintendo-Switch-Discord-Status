@@ -122,10 +122,17 @@
   "resolved" "https://registry.npmjs.org/@types/minimatch/-/minimatch-3.0.3.tgz"
   "version" "3.0.3"
 
+<<<<<<< HEAD
 "@types/node@*", "@types/node@^14.6.2":
   "integrity" "sha512-q4jlIR71hUpWTnGhXWcakgkZeHa3CCjcQcnuzU8M891BAWA2jHiziiWEPEkdS5pFsz7H9HJiy8BrK7tBRNrY7A=="
   "resolved" "https://registry.npmjs.org/@types/node/-/node-14.18.12.tgz"
   "version" "14.18.12"
+=======
+"@types/node@*", "@types/node@^12.0.12":
+  "integrity" "sha512-ge4xZ3vSBornVYlDnk7yZ0gK6ChHf/CHB7Gl1I0Jhah8DDnEQqBzgohYG4FX4p81TNirSETOiSyn+y1r9/IR6w=="
+  "resolved" "https://registry.npmjs.org/@types/node/-/node-12.12.54.tgz"
+  "version" "12.12.54"
+>>>>>>> parent of 13872e8 (Merge pull request #49 from hobby-grade/dependabot/npm_and_yarn/electron-13.6.6)
 
 "@types/resolve@1.17.1":
   "integrity" "sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw=="
@@ -716,6 +723,7 @@
     "pify" "^4.0.1"
     "temp" "^0.9.0"
 
+<<<<<<< HEAD
 "electron@^13.6.6":
   "integrity" "sha512-TP2Bl1nTxaH1yRmlYiF7imzvKE/NASE0cl6wOYA3AaP/UrBGc4L3NwJfn5Z55o+1t4TH8vCRxENufESyb32HhA=="
   "resolved" "https://registry.npmjs.org/electron/-/electron-13.6.6.tgz"
@@ -723,6 +731,15 @@
   dependencies:
     "@electron/get" "^1.0.1"
     "@types/node" "^14.6.2"
+=======
+"electron@^11.5.0":
+  "integrity" "sha512-WjNDd6lGpxyiNjE3LhnFCAk/D9GIj1rU3GSDealVShhkkkPR3Vh4q8ErXGDl1OAO/faomVa10KoFPUN/pLbNxg=="
+  "resolved" "https://registry.npmjs.org/electron/-/electron-11.5.0.tgz"
+  "version" "11.5.0"
+  dependencies:
+    "@electron/get" "^1.0.1"
+    "@types/node" "^12.0.12"
+>>>>>>> parent of 13872e8 (Merge pull request #49 from hobby-grade/dependabot/npm_and_yarn/electron-13.6.6)
     "extract-zip" "^1.0.3"
 
 "emoji-regex@^7.0.1":
