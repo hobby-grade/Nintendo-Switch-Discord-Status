@@ -1,11 +1,10 @@
 # Nintendo Switch Discord Status
-A moderately okay solution to display what you're playing on Nintendo Switch using Rich Presence on Discord. Thanks to [Da532](https://github.com/Da532) for doing 99% of the work on this. ✌️
+A moderately okay solution to display what you're playing on Nintendo Switch using Rich Presence on Discord. Thanks to [Da532](https://github.com/Da532), [Nora](https://github.com/UnicorNora), and [karei](https://github.com/kareigu) for making huge contributions to this project. ✌️
 
 ## Introduction
 "Nintendo Switch Discord Status" is a somewhat competent fork of ['NS-RPC' (Nintendo Nintendo Switch Discord Status)](https://github.com/Da532/NS-RPC), an Electron app for Windows and macOS that allows Switch users to display
 the game they're currently playing as their Discord status with Rich Presence.
 
-*This was my first time ever using JavaScript and I'm not great at it. I'm open to hearing how to improve*
 
 ![Nintendo Switch Discord Status Screenshot](https://i.imgur.com/PkVVlgX.png)
 
@@ -16,14 +15,14 @@ the game they're currently playing as their Discord status with Rich Presence.
 * Experience my absolutely disgusting attempt at re-designing a user interface.
 
 ### Missing a game?
-Open an issue on this page and I'll add it as quickly as I can.
+Open an issue on this page and I'll add it as quickly as I can. Thanks to [karei](https://github.com/kareigu) for the ability to type in custom games that use the default 'Home' image. 
 
 ### Problems:
-I have been noticing that new releases of the application seem to require a restart of the Discord application, I am not sure why this started happning, but if you notice that art assets aren't loading, try restarting both applications.
+I have been noticing that new releases of the application seem to require a restart of the Discord application, I am not sure why this started happening, but if you notice that art assets aren't loading, try restarting both applications.
 
-As of right now, I do not know of a way to have more than 300 art assets stored by Discord in order to display artwork for all of the games that are available on the Nintendo Switch. I have not added  games to the list yet, but I will attempt to find a way around this limitation in the meantime. The temporary solution is to keep the list updated with the 300 most popular/recent games.
+As of right now, I do not know of a way to have more than 300 art assets stored by Discord in order to display artwork for all of the games that are available on the Nintendo Switch. I have not added 300 games to the list yet, but I will attempt to find a way around this limitation in the meantime. The temporary solution is to keep the list updated with the 300 most popular/recent games.
 
-Alternatively, the 300 game limit can be exceeded by using generic artwork for any game outside of the 300. The rich presence would then display the title and status of the game, just without the custom game artwork. I can foresee using the generic "Home" artwork in this case.
+Alternatively, the 300 game limit can be exceeded by using generic artwork for any game outside of the 300. The rich presence would then display the title and status of the game, just without the custom game artwork. I can foresee using the generic 'Home' artwork in this case.
 
 If you'd like to leave any suggestions or ideas about this problem, please open an issue on this repo.
 
