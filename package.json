@@ -1,6 +1,6 @@
 {
   "name": "Nintendo-Switch-Discord-Status",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A mildly decent way to display your Nintendo Switch games in Discord.",
   "productName": "Nintendo Switch Discord Status",
   "main": "index.js",
