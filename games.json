@@ -27,6 +27,7 @@
   {"name" : "Cadence of Hyrule", "img" : "cadencehyrule"},
   {"name" : "Captain Toad: Treasure Tracker", "img" : "captaintoad"},
   {"name" : "Castlevania Advance Collection", "img" : "castlevaniaadvance"},
+  {"name" : "Cave Story+", "img" : "cavestory"},
   {"name" : "Celeste", "img" : "celeste"},
   {"name" : "Clubhouse Games: 51 Worldwide Classics", "img" : "clubhouse"},
   {"name" : "Collection of Mana", "img" : "com"},
@@ -180,5 +181,6 @@
   {"name" : "Neo: The World Ends with You", "img" : "neotwewy"},
   {"name" : "Xenoblade Chronicles Definitive Edition", "img" : "xcd"},
   {"name" : "Xenoblade Chronicles 2", "img" : "xc2"},
+  {"name" : "Xenoblade Chronicles 3", "img" : "xc3"},
   {"name" : "Yoshi's Crafted World", "img" : "yoshicraft"}
 ]
