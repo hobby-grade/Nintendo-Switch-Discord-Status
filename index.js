@@ -3,7 +3,10 @@ const { app, BrowserWindow, ipcMain } = require("electron");
 const rpc = require("discord-rich-presence")("647244885203877901");
 const gameData = require("./games");
 
-// For the love of God please let there be a better way of handling this
+// Testing the ability to auto update the application
+const { autoUpdater } = require('electron-updater');
+
+// For the love of god please let there be a better way of handling this
 if (require("./installer-events").handleSquirrelEvent(app)) throw false;
 
 let window;
@@ -32,9 +35,10 @@ function createWindow () {
 
     window.on("ready-to-show", () => window.show());
 
+    /* Uncomment this section to allow the dev panel to open automatically on unpackaged builds
     if(!app.isPackaged)
         window.openDevTools();
-
+    */
     setIdle();
 }
 
@@ -59,7 +63,6 @@ ipcMain.on("idle", (e, clicks) => {
     idle = clicks
     setIdle();
 });
-
 
 // Sets the presence to idle
 function setIdle() {
@@ -102,4 +105,9 @@ app.on("window-all-closed", () => {
 
 app.on("activate", () => {
     if (window === null) createWindow();
+});
+
+// Sends the app version from package.json to the main window
+ipcMain.on('version', (event) => {
+    event.sender.send('version', {version: app.getVersion()});
 });

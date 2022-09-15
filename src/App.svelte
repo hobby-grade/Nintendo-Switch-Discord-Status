@@ -5,6 +5,7 @@
   const electron = window.require('electron');
   const { ipcRenderer } = electron;
   const gameData = window.require('../games.json');
+  const version = window.require('../package.json').version;
 
   const home = gameData.filter(e => e.name === 'Home')[0];
   const custom = gameData.filter(e => e.name === 'Custom')[0];
@@ -25,7 +26,10 @@
 <main>
 	<header>
     <h1> <div class="fab fa-nintendo-switch"></div> Nintendo Switch<br>Discord Status </h1>
+    <p>v{version}</p>
   </header>
+
+ 
 
   <div class=spacer></div>
 

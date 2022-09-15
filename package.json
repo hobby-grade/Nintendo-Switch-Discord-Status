@@ -1,6 +1,6 @@
 {
   "name": "Nintendo-Switch-Discord-Status",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "A mildly decent way to display your Nintendo Switch games in Discord.",
   "productName": "Nintendo Switch Discord Status",
   "main": "index.js",
@@ -23,6 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "discord-rich-presence": "0.0.8",
+    "electron-updater": "^5.2.1",
     "sirv-cli": "^2.0.0"
   },
   "devDependencies": {

@@ -11,3 +11,4 @@ Nintendo-Switch-Discord-Status-darwin-x64.zip
 build.js
 .eslintrc.js
 .DS_STORE
+electron-builder.yml
