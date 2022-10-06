@@ -69,8 +69,6 @@ function restartApp() {
     <p>v{version}</p>
   </header>
 
- 
-
   <div class=spacer></div>
 
   {#if showAbout}
