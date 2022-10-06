@@ -1,4 +1,5 @@
 build
+dist
 node_modules
 Nintendo-Switch-Discord-Status
 Nintendo-Switch-Discord-Status.zip
@@ -11,3 +12,4 @@ Nintendo-Switch-Discord-Status-darwin-x64.zip
 build.js
 .eslintrc.js
 .DS_STORE
+electron-builder.yml

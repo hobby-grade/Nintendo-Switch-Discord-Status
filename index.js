@@ -3,7 +3,10 @@ const { app, BrowserWindow, ipcMain } = require("electron");
 const rpc = require("discord-rich-presence")("647244885203877901");
 const gameData = require("./games");
 
-// For the love of God please let there be a better way of handling this
+// Testing the ability to auto update the application
+const { autoUpdater } = require('electron-updater');
+
+// For the love of god please let there be a better way of handling this
 if (require("./installer-events").handleSquirrelEvent(app)) throw false;
 
 let window;
@@ -32,10 +35,16 @@ function createWindow () {
 
     window.on("ready-to-show", () => window.show());
 
+    /* Uncomment this section to allow the dev panel to open automatically on unpackaged builds
     if(!app.isPackaged)
         window.openDevTools();
-
+    */
     setIdle();
+
+    // Used to check if there are any updates available, and if so, download them
+    window.once('ready-to-show', () => {
+        autoUpdater.checkForUpdatesAndNotify();
+      });
 }
 
 // Defines the vars that will contain game data
@@ -60,6 +69,10 @@ ipcMain.on("idle", (e, clicks) => {
     setIdle();
 });
 
+// Executes when the restart button is clicked
+ipcMain.on('restart_app', () => {
+    autoUpdater.quitAndInstall();
+  });
 
 // Sets the presence to idle
 function setIdle() {
@@ -103,3 +116,21 @@ app.on("window-all-closed", () => {
 app.on("activate", () => {
     if (window === null) createWindow();
 });
+
+// Sends the app version from package.json to the main window
+ipcMain.on('version', (event) => {
+    event.sender.send('version', {version: app.getVersion()});
+});
+
+
+/* TESTING */
+
+// Sends a notification to the main window that an update is available
+autoUpdater.on('update-available', () => {
+    mainWindow.webContents.send('update_available');
+  });
+
+// Sends a notification to the main window that the update is downloaded
+autoUpdater.on('update-downloaded', () => {
+    mainWindow.webContents.send('update_downloaded');
+  });

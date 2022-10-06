@@ -1,6 +1,6 @@
 {
   "name": "Nintendo-Switch-Discord-Status",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "A mildly decent way to display your Nintendo Switch games in Discord.",
   "productName": "Nintendo Switch Discord Status",
   "main": "index.js",
@@ -8,7 +8,6 @@
   "scripts": {
     "start": "npm run svelte-build && electron .",
     "electron": "electron .",
-    "build": "npm run svelte-build && npm run electron-build-mac && npm run electron-build-win && npm run electron-build-linux",
     "build-mac": "npm run svelte-build && npm run electron-build-mac",
     "build-win": "npm run svelte-build && npm run electron-build-win",
     "build-linux": "npm run svelte-build && npm run electron-build-linux",
@@ -17,12 +16,15 @@
     "electron-build-linux": "electron-packager . --platform=linux --overwrite --out=build --icon=./icon.png",
     "svelte-build": "rollup -c",
     "svelte-dev": "rollup -c -w",
-    "svelte-start": "sirv public"
+    "svelte-start": "sirv public",
+    "build": "electron-builder build --mac --win --linux --publish never",
+    "deploy": "electron-builder build --mac --win --linux --publish always"
   },
   "author": "hobby-grade",
   "license": "MIT",
   "dependencies": {
     "discord-rich-presence": "0.0.8",
+    "electron-updater": "^5.2.1",
     "sirv-cli": "^2.0.0"
   },
   "devDependencies": {
@@ -30,6 +32,7 @@
     "@rollup/plugin-node-resolve": "^11.0.0",
     "concurrently": "^7.1.0",
     "electron": "^11.5.0",
+    "electron-builder": "^23.3.3",
     "electron-packager": "^15.2.0",
     "electron-winstaller": "^3.0.4",
     "eslint": "^5.16.0",

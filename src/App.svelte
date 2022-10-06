@@ -1,10 +1,30 @@
+<!-- TESTING Adding the ability to create notifications -->
+
+<div id="notification" class="hidden">
+  <p id="message"></p>
+  <button id="close-button" onClick="closeNotification()">
+    Close
+  </button>
+  <button id="restart-button" onClick="restartApp()" class="hidden">
+    Restart
+  </button>
+</div>
+
+<!-- TESTING -->
+
 <script>
   import About from './About.svelte';
   import GameList from './GameList.svelte';
 
+  // Testing notification listener
+  const notification = document.getElementById('notification');
+  const message = document.getElementById('message');
+  const restartButton = document.getElementById('restart-button');
+  // Done
   const electron = window.require('electron');
   const { ipcRenderer } = electron;
   const gameData = window.require('../games.json');
+  const version = window.require('../package.json').version;
 
   const home = gameData.filter(e => e.name === 'Home')[0];
   const custom = gameData.filter(e => e.name === 'Custom')[0];
@@ -20,12 +40,36 @@
 
   let showAbout = false;
 
+  ipcRenderer.on('update_available', () => {
+  ipcRenderer.removeAllListeners('update_available');
+  message.innerText = 'A new update is available. Downloading now...';
+  notification.classList.remove('hidden');
+});
+
+ipcRenderer.on('update_downloaded', () => {
+  ipcRenderer.removeAllListeners('update_downloaded');
+  message.innerText = 'Update Downloaded. It will be installed on restart. Restart now?';
+  restartButton.classList.remove('hidden');
+  notification.classList.remove('hidden');
+});
+
+function closeNotification() {
+  notification.classList.add('hidden');
+}
+
+function restartApp() {
+  ipcRenderer.send('restart_app');
+}
+
 </script>
 
 <main>
 	<header>
     <h1> <div class="fab fa-nintendo-switch"></div> Nintendo Switch<br>Discord Status </h1>
+    <p>v{version}</p>
   </header>
+
+ 
 
   <div class=spacer></div>
 
@@ -79,6 +123,7 @@
         About 
       </a>
   </div>
+
 </main>
 
 <style>
@@ -112,6 +157,20 @@
 
 .bigSpacer {
     margin-top: 25px;
+}
+
+#notification {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 200px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.hidden {
+  display: none;
 }
 
 </style>
