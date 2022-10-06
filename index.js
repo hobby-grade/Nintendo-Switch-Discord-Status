@@ -40,6 +40,11 @@ function createWindow () {
         window.openDevTools();
     */
     setIdle();
+
+    // Used to check if there are any updates available, and if so, download them
+    window.once('ready-to-show', () => {
+        autoUpdater.checkForUpdatesAndNotify();
+      });
 }
 
 // Defines the vars that will contain game data
@@ -63,6 +68,11 @@ ipcMain.on("idle", (e, clicks) => {
     idle = clicks
     setIdle();
 });
+
+// Executes when the restart button is clicked
+ipcMain.on('restart_app', () => {
+    autoUpdater.quitAndInstall();
+  });
 
 // Sets the presence to idle
 function setIdle() {
@@ -111,3 +121,16 @@ app.on("activate", () => {
 ipcMain.on('version', (event) => {
     event.sender.send('version', {version: app.getVersion()});
 });
+
+
+/* TESTING */
+
+// Sends a notification to the main window that an update is available
+autoUpdater.on('update-available', () => {
+    mainWindow.webContents.send('update_available');
+  });
+
+// Sends a notification to the main window that the update is downloaded
+autoUpdater.on('update-downloaded', () => {
+    mainWindow.webContents.send('update_downloaded');
+  });

@@ -8,7 +8,7 @@
   "scripts": {
     "start": "npm run svelte-build && electron .",
     "electron": "electron .",
-    "build": "npm run svelte-build && npm run electron-build-mac && npm run electron-build-win && npm run electron-build-linux",
+    // "build": "npm run svelte-build && npm run electron-build-mac && npm run electron-build-win && npm run electron-build-linux",
     "build-mac": "npm run svelte-build && npm run electron-build-mac",
     "build-win": "npm run svelte-build && npm run electron-build-win",
     "build-linux": "npm run svelte-build && npm run electron-build-linux",
@@ -17,7 +17,9 @@
     "electron-build-linux": "electron-packager . --platform=linux --overwrite --out=build --icon=./icon.png",
     "svelte-build": "rollup -c",
     "svelte-dev": "rollup -c -w",
-    "svelte-start": "sirv public"
+    "svelte-start": "sirv public", 
+    "build": "electron-builder build --mac --win --publish never",
+    "deploy": "electron-builder build --mac --win --publish always"
   },
   "author": "hobby-grade",
   "license": "MIT",
