@@ -89,7 +89,7 @@ function restartApp() {
           <input 
             class="input is-danger" 
             type=text id=status 
-            placeholder="Online, Farting with friends, etc."
+            placeholder="Online, Karting with friends, etc."
             bind:value={statusMessage}
           />
           <div class=spacer></div>
