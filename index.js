@@ -42,9 +42,8 @@ function createWindow () {
     setIdle();
 
     // Used to check if there are any updates available, and if so, download them
-    window.once('ready-to-show', () => {
-        autoUpdater.checkForUpdatesAndNotify();
-      });
+    
+    autoUpdater.checkForUpdatesAndNotify();
 }
 
 // Defines the vars that will contain game data
