@@ -31,7 +31,7 @@
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "concurrently": "^7.1.0",
-    "electron": "^11.5.0",
+    "electron": "^18.3.7",
     "electron-builder": "^23.3.3",
     "electron-packager": "^15.2.0",
     "electron-winstaller": "^3.0.4",
