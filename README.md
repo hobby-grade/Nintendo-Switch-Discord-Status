@@ -33,7 +33,7 @@ All you need is a high tolerance for bad UI and the [Discord App](https://discor
 
 ## Installation
 If you're looking for convenience, you'll find already built copies of Nintendo Switch Discord Status for
-Linux, macOS, and Windows [here](https://github.com/hobby-grade/Nintendo-Switch-Discord-Status/releases).
+Linux, macOS, and Windows [here](https://github.com/hobby-grade/Nintendo-Switch-Discord-Status/releases). You will need to install the Windows version of the application, and optionally the macOS version of the application. With both of these OSes you will encounter SmartScreen / Gatekeeper. You will need to allow the application through these obstacles to use it.
 
 ## Building From source
 Building from source is also possible if you don't value your time.
@@ -41,7 +41,7 @@ Building from source is also possible if you don't value your time.
 Required packages: [Node.js](https://nodejs.org/).
 
 1. Once Node.js is installed, git clone or download and extract the source files to your chosen directory.
-2. Open a terminal window, or command prompt in that directory.
+2. Open a terminal window in that directory.
 3. To install the application's required dependencies, use the command `npm install`.
 4. Finally, to execute the application you simply need to enter into terminal `npm start`.
 
