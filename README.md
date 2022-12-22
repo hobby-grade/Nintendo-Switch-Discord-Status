@@ -47,3 +47,10 @@ Required packages: [Node.js](https://nodejs.org/).
 
 ## Need Help?
 Open an issue on this page and I'll get back to you as soon as possible!
+
+## Donations
+If for some reason you'd like to donate, you can use the wallet addresses below:
+BTC: 37BgqEvSXY47ZnT3g4xDTyeLGUjVffDbkt
+LTC: LY29oyRb5S9Z5XfzXoWj94iQDrDBXswAtV
+BAT: 0x394bb3A0eE014ae46988Ebc8B6e26F509E20A0fD
+
