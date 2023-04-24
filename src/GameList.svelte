@@ -19,6 +19,7 @@
       containerStyles="width: 20rem;"
       on:select="{(e) => selectedGame = e.detail.name}"
     />
+<!-- When "custom" is selected from the games list, this additional input field appears-->
     {#if selectedGame === 'Custom'}
       <input 
         class="input is-danger customName"
